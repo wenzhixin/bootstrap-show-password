@@ -1,3 +1,7 @@
+/**
+ * @author zhixin wen <wenzhixin2010@gmail.com>
+ */
+
 !function ($) {
 
     'use strict'; // jshint ;_;
