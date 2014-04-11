@@ -5,8 +5,9 @@ Show/hide password plugin for bootstrap.
 
 ## Demos
 
-This plugin support [bootstrap v2](http://wenzhixin.net.cn/p/bootstrap-show-password/v2.html)
-and [bootstrap v3](http://wenzhixin.net.cn/p/bootstrap-show-password/v3.html).
+This plugin support bootstrap v2 and bootstrap v3.
+
+[Live demo](http://wenzhixin.net.cn/p/bootstrap-show-password/)
 
 ## Usage
 
