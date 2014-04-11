@@ -14,7 +14,7 @@ This plugin support bootstrap v2 and bootstrap v3.
 The plugin acts on ```<input>``` elements (typically password fields):
 
 ```
-<input id="password" type="password" message="Show/hide password">
+<input id="password" type="password" data-message="Show/hide password">
 ```
 
 ```
