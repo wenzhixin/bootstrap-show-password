@@ -28,17 +28,18 @@
         this.$element.wrap('<div class="input-append input-group" />');
 
         this.$text = $('<input type="text" />')
+            .insertAfter(this.$element)
             .attr('class', this.$element.attr('class'))
             .attr('placeholder', this.$element.attr('placeholder'))
             .css('display', this.$element.css('display'))
-            .val(this.$element.val()).hide().insertAfter(this.$element);
+            .val(this.$element.val()).hide();
 
         this.$icon = $([
             '<span tabindex="100" title="' + this.options.message + '" class="add-on input-group-addon">',
             '<i class="icon-eye-open' + (this.options.white ? ' icon-white' : '') +
                 ' glyphicon glyphicon-eye-open"></i>',
             '</span>'
-        ].join('')).css('cursor', 'pointer').insertAfter(this.$text);
+        ].join('')).insertAfter(this.$text).css('cursor', 'pointer');
 
         // events
         this.$text.off('keyup').on('keyup', $.proxy(function() {
