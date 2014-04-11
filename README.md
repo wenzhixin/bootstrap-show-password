@@ -1,4 +1,4 @@
-bootstrap-show-password
+Bootstrap Show Password
 =======================
 
 Show/hide password plugin for bootstrap.
