@@ -30,7 +30,7 @@ $('#password').password();
 ## Options
 
 Options can be passed via data attributes or JavaScript.
-For data attributes, append the option name to ```data-```, as in ```data-message="Show/hide password"```.
+For data attributes, append the option name to `data-`, as in `data-message="Show/hide password"`.
 
 <table>
     <thead>
@@ -47,21 +47,21 @@ For data attributes, append the option name to ```data-```, as in ```data-messag
             <td>-</td>
             <td>data-toggle</td>
             <td>String</td>
-            <td>`password`</td>
+            <td>password</td>
             <td>Active password without writing JavaScript.</td>
         </tr>
         <tr>
             <td>message</td>
             <td>data-message</td>
             <td>String</td>
-            <td>`Click here to show/hide password`</td>
+            <td>Click here to show/hide password</td>
             <td>The tooltip of show/hide icon.</td>
         </tr>
         <tr>
             <td>white</td>
             <td>data-white</td>
             <td>Boolean</td>
-            <td>`false`</td>
+            <td>false</td>
             <td>Show the white icon. (Just work in bootstrap v2)</td>
         </tr>
     </tbody>
@@ -130,8 +130,6 @@ $('#password).on('show.bs.password', function (e) {
 ### 1.0.0
 
 * Initial release
-
-init
 
 ## LICENSE
 
