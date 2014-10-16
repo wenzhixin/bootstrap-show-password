@@ -20,7 +20,7 @@
 
     Password.DEFAULTS = {
         white: false, // v2
-        message: 'Click here show/hide password'
+        message: 'Click here to show/hide password'
     };
 
     Password.prototype.init = function() {

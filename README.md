@@ -11,17 +11,23 @@ This plugin support bootstrap v2 and bootstrap v3.
 
 ## Usage
 
-The plugin acts on ```<input>``` elements (typically password fields):
+The plugin acts on `<input>` elements (typically password fields):
 
-```
-<input id="password" type="password" data-message="Show/hide password">
+```html
+<input id="password" class="form-control" type="password" data-toggle="password">
 ```
 
+### Via data attributes
+```html
+<input data-toggle="password">
 ```
+
+### Via JavaScript
+```javascript
 $('#password').password();
 ```
 
-### Options
+## Options
 
 Options can be passed via data attributes or JavaScript.
 For data attributes, append the option name to ```data-```, as in ```data-message="Show/hide password"```.
@@ -30,6 +36,7 @@ For data attributes, append the option name to ```data-```, as in ```data-messag
     <thead>
         <tr>
             <th>Name</th>
+            <th>Attribute</th>
             <th>type</th>
             <th>default</th>
             <th>description</th>
@@ -37,44 +44,53 @@ For data attributes, append the option name to ```data-```, as in ```data-messag
     </thead>
     <tbody>
         <tr>
+            <td>-</td>
+            <td>data-toggle</td>
+            <td>String</td>
+            <td>`password`</td>
+            <td>Active password without writing JavaScript.</td>
+        </tr>
+        <tr>
             <td>message</td>
-            <td>string</td>
-            <td>Click here show/hide password</td>
+            <td>data-message</td>
+            <td>String</td>
+            <td>`Click here to show/hide password`</td>
             <td>The tooltip of show/hide icon.</td>
         </tr>
         <tr>
             <td>white</td>
-            <td>boolean</td>
-            <td>false</td>
-            <td>Show the white icon.(Just work in bootstrap v2)</td>
+            <td>data-white</td>
+            <td>Boolean</td>
+            <td>`false`</td>
+            <td>Show the white icon. (Just work in bootstrap v2)</td>
         </tr>
     </tbody>
 </table>
 
-### Methods
+## Methods
 
-#### .password('show')
+### .password('show')
 
 Manually show the password.
 ```
 $('#password).password('show');
 ```
 
-#### .password('hide')
+### .password('hide')
 
 Manually hide the password.
 ```
 $('#password).password('hide');
 ```
 
-#### .password('toggle')
+### .password('toggle')
 
 Manually toggle the password.
 ```
 $('#password).password('toggle');
 ```
 
-### Events
+## Events
 
 The plugin exposes a few events.
 
@@ -99,7 +115,7 @@ The plugin exposes a few events.
 
 ```
 $('#password).on('show.bs.password', function (e) {
-
+    // code here
 });
 ```
 
