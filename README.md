@@ -1,7 +1,7 @@
 Bootstrap Show Password
 =======================
 
-Show/hide password plugin for bootstrap.
+Show/hide password plugin for twitter bootstrap.
 
 ## Demos
 
@@ -118,6 +118,20 @@ $('#password).on('show.bs.password', function (e) {
     // code here
 });
 ```
+
+## CHANGELOG
+
+### 1.0.1
+
+* Via data attribute support.
+* Rename file name to bootstrap-show-password.js
+* Add bootstrap-show-password.min.js
+
+### 1.0.0
+
+* Initial release
+
+init
 
 ## LICENSE
 

@@ -1,6 +1,7 @@
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
- * version: 1.0.0
+ * https://github.com/wenzhixin/bootstrap-show-password
+ * version: 1.0.1
  */
 
 !function ($) {
