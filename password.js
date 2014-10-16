@@ -118,5 +118,9 @@
         $.fn.password = old;
         return this;
     };
+    
+    $(function () {
+        $('[data-toggle="password"]').password();
+    });
 
 }(window.jQuery);
