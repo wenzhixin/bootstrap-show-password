@@ -126,6 +126,16 @@ $('#password).on('show.bs.password', function (e) {
 });
 ```
 
+## Reporting issues
+
+Please provide jsFiddle when creating issues!
+
+It's really saves much time. Use this as template:
+
+[jsFiddle Bootstrap Show Password](http://jsfiddle.net/wenyi/L1ugpqk5/1/)
+
+Your feedback is very appreciated!
+
 ## CHANGELOG
 
 ### 1.0.1
