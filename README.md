@@ -51,6 +51,13 @@ For data attributes, append the option name to `data-`, as in `data-message="Sho
             <td>Active password without writing JavaScript.</td>
         </tr>
         <tr>
+            <td>placement</td>
+            <td>data-placement</td>
+            <td>String</td>
+            <td>after</td>
+            <td>The placement of show/hide icon, can be 'before' or 'after'.</td>
+        </tr>
+        <tr>
             <td>message</td>
             <td>data-message</td>
             <td>String</td>
