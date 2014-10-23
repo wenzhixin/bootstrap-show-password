@@ -3,13 +3,28 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <link rel="stylesheet" href="assets/bootstrap-v3/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/bootstrap-v3/css/bootstrap.css">
 </head>
 <body>
 <div style="width: 300px; margin: 50px auto;">
-    <p><input id="password" class="form-control" type="password" value="123" placeholder="password" /></p>
-    <p><label><input id="methods" type="checkbox"/> Show password</label></p>
+    <p>
+        <input id="password"
+               class="form-control"
+               type="password"
+               value="123"
+               placeholder="password">
+    </p>
+    <p><label><input id="methods" type="checkbox"> Show password</label></p>
     <p id="eventLog">Event log</p>
+    <hr>
+    <p>
+        <input data-toggle="password"
+               data-placement="before"
+               class="form-control"
+               type="password"
+               value="123"
+               placeholder="password">
+    </p>
 </div>
 
 <script src="assets/jquery.min.js"></script>
