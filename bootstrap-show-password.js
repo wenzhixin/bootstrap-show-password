@@ -8,6 +8,30 @@
 
     'use strict';
 
+    // TOOLS DEFINITION
+    // ======================
+
+    // it only does '%s', and return '' when arguments are undefined
+    var sprintf = function(str) {
+        var args = arguments,
+            flag = true,
+            i = 1;
+
+        str = str.replace(/%s/g, function () {
+            var arg = args[i++];
+
+            if (typeof arg === 'undefined') {
+                flag = false;
+                return '';
+            }
+            return arg;
+        });
+        if (flag) {
+            return str;
+        }
+        return '';
+    };
+
     // PASSWORD CLASS DEFINITION
     // ======================
 
@@ -20,16 +44,29 @@
     };
 
     Password.DEFAULTS = {
+        placement: 'after', // 'before' or 'after'
         white: false, // v2
         message: 'Click here to show/hide password'
     };
 
     Password.prototype.init = function() {
+        var placementFuc,
+            inputClass; // v2 class
+
+        if (this.options.placement === 'before') {
+            placementFuc = 'insertBefore';
+            inputClass = 'input-prepend';
+        } else {
+            this.options.placement = 'after'; // default to after
+            placementFuc = 'insertAfter';
+            inputClass = 'input-append';
+        }
+
         // Create the text, icon and assign
-        this.$element.wrap('<div class="input-append input-group" />');
+        this.$element.wrap(sprintf('<div class="%s input-group" />', inputClass));
 
         this.$text = $('<input type="text" />')
-            .insertAfter(this.$element)
+            [placementFuc](this.$element)
             .attr('class', this.$element.attr('class'))
             .attr('placeholder', this.$element.attr('placeholder'))
             .css('display', this.$element.css('display'))
@@ -40,7 +77,7 @@
             '<i class="icon-eye-open' + (this.options.white ? ' icon-white' : '') +
                 ' glyphicon glyphicon-eye-open"></i>',
             '</span>'
-        ].join('')).insertAfter(this.$text).css('cursor', 'pointer');
+        ].join(''))[placementFuc](this.$text).css('cursor', 'pointer');
 
         // events
         this.$text.off('keyup').on('keyup', $.proxy(function() {
@@ -69,7 +106,7 @@
             .addClass('icon-eye-close glyphicon-eye-close');
 
         // v3 input-group
-        this.$element.before(this.$text);
+        this.$text[this.options.placement](this.$element);
     };
 
     Password.prototype.hide = function(_relatedTarget) {
@@ -84,7 +121,7 @@
             .addClass('icon-eye-open glyphicon-eye-open');
 
         // v3 input-group
-        this.$text.before(this.$element);
+        this.$element[this.options.placement](this.$text);
     };
 
 
