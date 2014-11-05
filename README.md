@@ -97,6 +97,14 @@ Manually toggle the password.
 $('#password).password('toggle');
 ```
 
+### .password('val', [value]);
+
+Get the current value of the password or set the value of password.
+```
+$('#password).password('val'); // get value
+$('#password).password('val', 'password'); // set value
+```
+
 ## Events
 
 The plugin exposes a few events.
@@ -137,6 +145,10 @@ It's really saves much time. Use this as template:
 Your feedback is very appreciated!
 
 ## CHANGELOG
+
+### 1.0.2
+
+* Add `val` option.
 
 ### 1.0.1
 
