@@ -124,26 +124,49 @@
         this.$element[this.options.placement](this.$text);
     };
 
+    Password.prototype.val = function (value) {
+        if (typeof value === 'undefined') {
+            return this.$element.val();
+        } else {
+            this.$element.val(value);
+            this.$text.val(value);
+        }
+    };
+
 
     // PASSWORD PLUGIN DEFINITION
     // =======================
 
     var old = $.fn.password;
 
-    $.fn.password = function(option, _relatedTarget) {
-        return this.each(function() {
+    $.fn.password = function() {
+        var option = arguments[0],
+            args = arguments,
+
+            value,
+            allowedMethods = ['show', 'hide', 'toggle', 'val']; // public function
+
+        this.each(function() {
             var $this = $(this),
                 data = $this.data('bs.password'),
                 options = $.extend({}, Password.DEFAULTS, $this.data(), typeof option === 'object' && option);
 
-            if (!data) {
-                $this.data('bs.password', (data = new Password(this, options)));
-            }
-
             if (typeof option === 'string') {
-                data[option](_relatedTarget);
+                if ($.inArray(option, allowedMethods) < 0) {
+                    throw "Unknown method: " + option;
+                }
+                value = data[option](args[1]);
+            } else {
+                if (!data) {
+                    data = new Password($this, options);
+                    $this.data('bs.password', data);
+                } else {
+                    data.init(options);
+                }
             }
         });
+
+        return value ? value : this;
     };
 
     $.fn.password.Constructor = Password;
