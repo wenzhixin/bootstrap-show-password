@@ -91,7 +91,7 @@
     };
 
     Password.prototype.toggle = function(_relatedTarget) {
-        this[!this.isShown ? 'show' : 'hide']();
+        this[!this.isShown ? 'show' : 'hide'](_relatedTarget);
     };
 
     Password.prototype.show = function(_relatedTarget) {
