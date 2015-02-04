@@ -72,6 +72,10 @@
             .css('display', this.$element.css('display'))
             .val(this.$element.val()).hide();
 
+        // Copy readonly attribute if it's set
+        if (this.$element.prop('readonly'))
+            this.$text.prop('readonly', true);
+
         this.$icon = $([
             '<span tabindex="100" title="' + this.options.message + '" class="add-on input-group-addon">',
             '<i class="icon-eye-open' + (this.options.white ? ' icon-white' : '') +
