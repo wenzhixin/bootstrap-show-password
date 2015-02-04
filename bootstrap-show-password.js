@@ -68,6 +68,7 @@
         this.$text = $('<input type="text" />')
             [placementFuc](this.$element)
             .attr('class', this.$element.attr('class'))
+            .attr('style', this.$element.attr('style'))
             .attr('placeholder', this.$element.attr('placeholder'))
             .css('display', this.$element.css('display'))
             .val(this.$element.val()).hide();
