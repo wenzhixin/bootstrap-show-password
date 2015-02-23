@@ -80,29 +80,29 @@ For data attributes, append the option name to `data-`, as in `data-message="Sho
 
 Manually show the password.
 ```
-$('#password).password('show');
+$('#password').password('show');
 ```
 
 ### .password('hide')
 
 Manually hide the password.
 ```
-$('#password).password('hide');
+$('#passwor'd).password('hide');
 ```
 
 ### .password('toggle')
 
 Manually toggle the password.
 ```
-$('#password).password('toggle');
+$('#password').password('toggle');
 ```
 
 ### .password('val', [value]);
 
 Get the current value of the password or set the value of password.
 ```
-$('#password).password('val'); // get value
-$('#password).password('val', 'password'); // set value
+$('#password').password('val'); // get value
+$('#password').password('val', 'password'); // set value
 ```
 
 ## Events
@@ -129,7 +129,7 @@ The plugin exposes a few events.
 </table>
 
 ```
-$('#password).on('show.bs.password', function (e) {
+$('#password').on('show.bs.password', function (e) {
     // code here
 });
 ```
