@@ -1,18 +1,28 @@
 {
-    "name": "bootstrap-show-password",
-    "version": "1.0.2",
-    "description": "Show/hide password plugin for twitter bootstrap.",
-    "main": "gulpfile.js",
-    "dependencies": {
-        "del": "^0.1.2",
-        "gulp": "^3.8.7",
-        "gulp-header": "^1.1.1",
-        "gulp-rename": "^1.2.0",
-        "gulp-uglify": "^0.3.1"
-    },
-    "devDependencies": {},
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "zhixin wen <wenzhixin2010@gmail.com>"
+  "name": "bootstrap-show-password",
+  "version": "1.0.2",
+  "description": "Show/hide password plugin for twitter bootstrap.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "del": "^0.1.2",
+    "gulp": "^3.8.7",
+    "gulp-header": "^1.1.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^0.3.1"
+  },
+  "devDependencies": {},
+  "author": "zhixin wen <wenzhixin2010@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wenzhixin/bootstrap-show-password.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "password"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wenzhixin/bootstrap-show-password/issues"
+  },
+  "homepage": "https://github.com/wenzhixin/bootstrap-show-password"
 }

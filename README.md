@@ -9,6 +9,24 @@ This plugin support bootstrap v2 and bootstrap v3.
 
 [Live demo](http://wenzhixin.net.cn/p/bootstrap-show-password/)
 
+## How to get it
+
+### Manual download
+
+Use [Releases page](https://github.com/wenzhixin/bootstrap-show-password/releases) or [the source](https://github.com/wenzhixin/bootstrap-show-password/archive/master.zip).
+
+### Bower
+
+```
+bower install bootstrap-show-password
+```
+
+### Npm
+
+```
+npm install bootstrap-show-password
+```
+
 ## Usage
 
 The plugin acts on `<input>` elements (typically password fields):
