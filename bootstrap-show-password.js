@@ -86,6 +86,7 @@
 
         // events
         this.$text.off('keyup').on('keyup', $.proxy(function() {
+            if (!this.isShown) return;
             this.$element.val(this.$text.val());
         }, this));
 
@@ -184,7 +185,7 @@
         $.fn.password = old;
         return this;
     };
-    
+
     $(function () {
         $('[data-toggle="password"]').password();
     });
