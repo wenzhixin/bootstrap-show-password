@@ -105,7 +105,7 @@ $('#password').password('show');
 
 Manually hide the password.
 ```
-$('#passwor'd).password('hide');
+$('#password').password('hide');
 ```
 
 ### .password('toggle')
