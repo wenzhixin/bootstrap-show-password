@@ -87,11 +87,11 @@
         // events
         this.$text.off('keyup').on('keyup', $.proxy(function() {
             if (!this.isShown) return;
-            this.$element.val(this.$text.val());
+            this.$element.val(this.$text.val()).trigger('change');
         }, this));
 
         this.$icon.off('click').on('click', $.proxy(function() {
-            this.$text.val(this.$element.val());
+            this.$text.val(this.$element.val()).trigger('change');
             this.toggle();
         }, this));
     };
@@ -134,7 +134,7 @@
         if (typeof value === 'undefined') {
             return this.$element.val();
         } else {
-            this.$element.val(value);
+            this.$element.val(value).trigger('change');
             this.$text.val(value);
         }
     };
