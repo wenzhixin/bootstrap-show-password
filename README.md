@@ -89,9 +89,40 @@ For data attributes, append the option name to `data-`, as in `data-message="Sho
             <td>false</td>
             <td>Show the white icon. (Just work in bootstrap v2)</td>
         </tr>
+        <tr>
+            <td>eyeClass</td>
+            <td>data-eye-class</td>
+            <td>String</td>
+            <td>glyphicon</td>
+            <td>Base eye icon class.</td>
+        </tr>
+        <tr>
+            <td>eyeOpenClass</td>
+            <td>data-eye-open-class</td>
+            <td>String</td>
+            <td>glyphicon-eye-open</td>
+            <td>Open eye icon class.</td>
+        </tr>
+        <tr>
+            <td>eyeCloseClass</td>
+            <td>data-eye-close-class</td>
+            <td>String</td>
+            <td>glyphicon-eye-close</td>
+            <td>Close eye icon class.</td>
+        </tr>
+
     </tbody>
 </table>
 
+By default the plugin uses Bootstrap's Glyphicon font for painting open/close eye. You can use your custom font however. For example, you can switch to Font Awesome with:
+```
+$("#password").password({
+    eyeClass: 'fa',
+    eyeOpenClass: 'fa-eye',
+    eyeCloseClass: 'fa-eye-slash'
+})
+```
+You can see live demo of using plugin with Font Awesome on [dogada.org](https://dogada.org/me/).
 ## Methods
 
 ### .password('show')
@@ -163,6 +194,10 @@ It's really saves much time. Use this as template:
 Your feedback is very appreciated!
 
 ## CHANGELOG
+
+### 1.0.3
+
+* Add `eyeClass`, `eyeOpenClass`, `eyeCloseClass` to use custom font (for example Font Awesome) instead of Bootstrap's default Glyphicon. 
 
 ### 1.0.2
 

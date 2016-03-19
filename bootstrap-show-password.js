@@ -46,7 +46,10 @@
     Password.DEFAULTS = {
         placement: 'after', // 'before' or 'after'
         white: false, // v2
-        message: 'Click here to show/hide password'
+        message: 'Click here to show/hide password',
+        eyeClass: 'glyphicon',
+        eyeOpenClass: 'glyphicon-eye-open',
+        eyeCloseClass: 'glyphicon-eye-close'
     };
 
     Password.prototype.init = function() {
@@ -80,7 +83,7 @@
         this.$icon = $([
             '<span tabindex="100" title="' + this.options.message + '" class="add-on input-group-addon">',
             '<i class="icon-eye-open' + (this.options.white ? ' icon-white' : '') +
-                ' glyphicon glyphicon-eye-open"></i>',
+                ' ' + this.options.eyeClass + ' ' + this.options.eyeOpenClass + '"></i>',
             '</span>'
         ].join(''))[placementFuc](this.$text).css('cursor', 'pointer');
 
@@ -108,8 +111,8 @@
         this.$element.hide();
         this.$text.show();
         this.$icon.find('i')
-            .removeClass('icon-eye-open glyphicon-eye-open')
-            .addClass('icon-eye-close glyphicon-eye-close');
+            .removeClass('icon-eye-open ' + this.options.eyeOpenClass)
+            .addClass('icon-eye-close ' + this.options.eyeCloseClass);
 
         // v3 input-group
         this.$text[this.options.placement](this.$element);
@@ -123,8 +126,8 @@
         this.$element.show();
         this.$text.hide();
         this.$icon.find('i')
-            .removeClass('icon-eye-close glyphicon-eye-close')
-            .addClass('icon-eye-open glyphicon-eye-open');
+            .removeClass('icon-eye-close ' + this.options.eyeCloseClass)
+            .addClass('icon-eye-open ' + this.options.eyeOpenClass);
 
         // v3 input-group
         this.$element[this.options.placement](this.$text);
