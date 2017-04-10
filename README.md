@@ -202,6 +202,10 @@ Your feedback is very appreciated!
 
 ## CHANGELOG
 
+### 1.1.0
+
+* Added support for google material design icons, by usgin the ```data-eye-class-position-inside``` property.
+
 ### 1.0.3
 
 * Add `eyeClass`, `eyeOpenClass`, `eyeCloseClass` to use custom font (for example Font Awesome) instead of Bootstrap's default Glyphicon. 
