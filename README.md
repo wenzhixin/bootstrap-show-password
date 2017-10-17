@@ -110,6 +110,13 @@ For data attributes, append the option name to `data-`, as in `data-message="Sho
             <td>glyphicon-eye-close</td>
             <td>Close eye icon class.</td>
         </tr>
+         <tr>
+            <td>eyeCloseClass</td>
+            <td>data-eye-class-position-inside</td>
+            <td>Boolean</td>
+            <td>false</td>
+            <td>Puts the open/close class inside the &lt;i>. Use this option with google material icons.</td>
+        </tr>
 
     </tbody>
 </table>
@@ -194,6 +201,10 @@ It's really saves much time. Use this as template:
 Your feedback is very appreciated!
 
 ## CHANGELOG
+
+### 1.1.0
+
+* Added support for google material design icons, by usgin the ```data-eye-class-position-inside``` property.
 
 ### 1.0.3
 

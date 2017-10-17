@@ -49,7 +49,8 @@
         message: 'Click here to show/hide password',
         eyeClass: 'glyphicon',
         eyeOpenClass: 'glyphicon-eye-open',
-        eyeCloseClass: 'glyphicon-eye-close'
+        eyeCloseClass: 'glyphicon-eye-close',
+        eyeClassPositionInside: false
     };
 
     Password.prototype.init = function() {
@@ -79,11 +80,11 @@
         // Copy readonly attribute if it's set
         if (this.$element.prop('readonly'))
             this.$text.prop('readonly', true);
-
         this.$icon = $([
             '<span tabindex="100" title="' + this.options.message + '" class="add-on input-group-addon">',
             '<i class="icon-eye-open' + (this.options.white ? ' icon-white' : '') +
-                ' ' + this.options.eyeClass + ' ' + this.options.eyeOpenClass + '"></i>',
+                ' ' + this.options.eyeClass + ' ' + (this.options.eyeClassPositionInside ? '' : this.options.eyeOpenClass) + '">' + 
+                (this.options.eyeClassPositionInside ? this.options.eyeOpenClass : '') + '</i>',
             '</span>'
         ].join(''))[placementFuc](this.$text).css('cursor', 'pointer');
 
@@ -110,9 +111,16 @@
         this.isShown = true;
         this.$element.hide();
         this.$text.show();
-        this.$icon.find('i')
-            .removeClass('icon-eye-open ' + this.options.eyeOpenClass)
-            .addClass('icon-eye-close ' + this.options.eyeCloseClass);
+        if( this.options.eyeClassPositionInside){
+            this.$icon.find('i')
+                .removeClass('icon-eye-open')
+                .addClass('icon-eye-close')
+                .html(this.options.eyeCloseClass);
+        }else{
+            this.$icon.find('i')
+                .removeClass('icon-eye-open ' + this.options.eyeOpenClass)
+                .addClass('icon-eye-close ' + this.options.eyeCloseClass);
+        }
 
         // v3 input-group
         this.$text[this.options.placement](this.$element);
@@ -125,9 +133,16 @@
         this.isShown = false;
         this.$element.show();
         this.$text.hide();
-        this.$icon.find('i')
-            .removeClass('icon-eye-close ' + this.options.eyeCloseClass)
-            .addClass('icon-eye-open ' + this.options.eyeOpenClass);
+        if( this.options.eyeClassPositionInside){
+            this.$icon.find('i')
+                .removeClass('icon-eye-close')
+                .addClass('icon-eye-open')
+                .html(this.options.eyeOpenClass);
+        }else{
+            this.$icon.find('i')
+                .removeClass('icon-eye-close ' + this.options.eyeCloseClass)
+                .addClass('icon-eye-open ' + this.options.eyeOpenClass);
+        }
 
         // v3 input-group
         this.$element[this.options.placement](this.$text);
