@@ -2,7 +2,7 @@
   "name": "bootstrap-show-password",
   "version": "1.1.0",
   "description": "Show/hide password plugin for twitter bootstrap.",
-  "main": "gulpfile.js",
+  "main": "bootstrap-show-password.js",
   "devDependencies": {
     "del": "^0.1.2",
     "gulp": "^3.8.7",
