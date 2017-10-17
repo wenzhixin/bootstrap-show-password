@@ -35,7 +35,9 @@
   <script src="bootstrap-show-password.js"></script>
   <script>
     $(function() {
-      $('#password').password().on('show.bs.password', function(e) {
+      $('#password').password()
+      .password('focus')
+      .on('show.bs.password', function(e) {
         $('#eventLog').text('On show event');
         $('#methods').prop('checked', true);
       }).on('hide.bs.password', function(e) {

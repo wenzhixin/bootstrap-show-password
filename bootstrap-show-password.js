@@ -157,6 +157,10 @@
         }
     };
 
+    Password.prototype.focus = function () {
+        this.$element.focus();
+    };
+
 
     // PASSWORD PLUGIN DEFINITION
     // =======================
@@ -168,7 +172,9 @@
             args = arguments,
 
             value,
-            allowedMethods = ['show', 'hide', 'toggle', 'val']; // public function
+            allowedMethods = [
+                'show', 'hide', 'toggle', 'val', 'focus'
+            ]; // public function
 
         this.each(function() {
             var $this = $(this),

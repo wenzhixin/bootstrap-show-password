@@ -161,6 +161,10 @@ $('#password').password('val'); // get value
 $('#password').password('val', 'password'); // set value
 ```
 
+### .password('focus')
+
+Focus the password input.
+
 ## Events
 
 The plugin exposes a few events.
@@ -202,13 +206,17 @@ Your feedback is very appreciated!
 
 ## CHANGELOG
 
+### 1.1.1
+
+* Add `focus` method.
+
 ### 1.1.0
 
-* Added support for google material design icons, by usgin the ```data-eye-class-position-inside``` property.
+* Add support for google material design icons, by usgin the ```data-eye-class-position-inside``` property.
 
 ### 1.0.3
 
-* Add `eyeClass`, `eyeOpenClass`, `eyeCloseClass` to use custom font (for example Font Awesome) instead of Bootstrap's default Glyphicon. 
+* Add `eyeClass`, `eyeOpenClass`, `eyeCloseClass` to use custom font (for example Font Awesome) instead of Bootstrap's default Glyphicon.
 
 ### 1.0.2
 
