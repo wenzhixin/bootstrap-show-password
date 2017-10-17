@@ -83,7 +83,7 @@
         this.$icon = $([
             '<span tabindex="100" title="' + this.options.message + '" class="add-on input-group-addon">',
             '<i class="icon-eye-open' + (this.options.white ? ' icon-white' : '') +
-                ' ' + this.options.eyeClass + ' ' + (this.options.eyeClassPositionInside ? '' : this.options.eyeOpenClass) + '">' + 
+                ' ' + this.options.eyeClass + ' ' + (this.options.eyeClassPositionInside ? '' : this.options.eyeOpenClass) + '">' +
                 (this.options.eyeClassPositionInside ? this.options.eyeOpenClass : '') + '</i>',
             '</span>'
         ].join(''))[placementFuc](this.$text).css('cursor', 'pointer');
@@ -111,12 +111,12 @@
         this.isShown = true;
         this.$element.hide();
         this.$text.show();
-        if( this.options.eyeClassPositionInside){
+        if (this.options.eyeClassPositionInside) {
             this.$icon.find('i')
                 .removeClass('icon-eye-open')
                 .addClass('icon-eye-close')
                 .html(this.options.eyeCloseClass);
-        }else{
+        } else {
             this.$icon.find('i')
                 .removeClass('icon-eye-open ' + this.options.eyeOpenClass)
                 .addClass('icon-eye-close ' + this.options.eyeCloseClass);
@@ -133,12 +133,12 @@
         this.isShown = false;
         this.$element.show();
         this.$text.hide();
-        if( this.options.eyeClassPositionInside){
+        if (this.options.eyeClassPositionInside) {
             this.$icon.find('i')
                 .removeClass('icon-eye-close')
                 .addClass('icon-eye-open')
                 .html(this.options.eyeOpenClass);
-        }else{
+        } else {
             this.$icon.find('i')
                 .removeClass('icon-eye-close ' + this.options.eyeCloseClass)
                 .addClass('icon-eye-open ' + this.options.eyeOpenClass);
