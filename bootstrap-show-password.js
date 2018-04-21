@@ -82,7 +82,7 @@
             this.$text.prop('readonly', true);
         this.$icon = $([
             '<div class="input-group-append">',
-            '<button tabindex="100" title="' + this.options.message + '" class="btn btn-outline-secondary">',
+            '<button tabindex="100" title="' + this.options.message + '" class="btn btn-outline-secondary" type="button">',
             '<i class="icon-eye-open' + (this.options.white ? ' icon-white' : '') +
                 ' ' + this.options.eyeClass + ' ' + (this.options.eyeClassPositionInside ? '' : this.options.eyeOpenClass) + '">' +
                 (this.options.eyeClassPositionInside ? this.options.eyeOpenClass : '') + '</i>',
