@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-show-password",
-  "version": "1.1.2",
-  "description": "Show/hide password plugin for twitter bootstrap.",
+  "version": "2.0.0",
+  "description": "Show/hide password plugin for twitter bootstrap 4.",
   "main": "bootstrap-show-password.js",
   "devDependencies": {
     "del": "^0.1.2",

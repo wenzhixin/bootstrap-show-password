@@ -1,7 +1,7 @@
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
  * https://github.com/wenzhixin/bootstrap-show-password
- * version: 1.1.2
+ * version: 2.0.0
  */
 
 !function ($) {
@@ -81,11 +81,13 @@
         if (this.$element.prop('readonly'))
             this.$text.prop('readonly', true);
         this.$icon = $([
-            '<span tabindex="100" title="' + this.options.message + '" class="add-on input-group-addon">',
+            '<div class="input-group-append">',
+            '<button tabindex="100" title="' + this.options.message + '" class="btn btn-outline-secondary">',
             '<i class="icon-eye-open' + (this.options.white ? ' icon-white' : '') +
                 ' ' + this.options.eyeClass + ' ' + (this.options.eyeClassPositionInside ? '' : this.options.eyeOpenClass) + '">' +
                 (this.options.eyeClassPositionInside ? this.options.eyeOpenClass : '') + '</i>',
-            '</span>'
+            '</button>',
+            '</div>'
         ].join(''))[placementFuc](this.$text).css('cursor', 'pointer');
 
         // events

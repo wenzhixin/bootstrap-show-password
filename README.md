@@ -1,13 +1,7 @@
 Bootstrap Show Password
 =======================
 
-Show/hide password plugin for twitter bootstrap.
-
-## Demos
-
-This plugin support bootstrap v2 and bootstrap v3.
-
-[Live demo](http://wenzhixin.net.cn/p/bootstrap-show-password/)
+Show/hide password plugin for twitter bootstrap 4.
 
 ## How to get it
 
@@ -205,6 +199,10 @@ It's really saves much time. Use this as template:
 Your feedback is very appreciated!
 
 ## CHANGELOG
+
+### 2.0.0
+
+* Support for Bootstrap 4
 
 ### 1.1.1
 
