@@ -47,9 +47,9 @@
         placement: 'after', // 'before' or 'after'
         white: false, // v2
         message: 'Click here to show/hide password',
-        eyeClass: 'glyphicon',
-        eyeOpenClass: 'glyphicon-eye-open',
-        eyeCloseClass: 'glyphicon-eye-close',
+        eyeClass: 'fa',
+        eyeOpenClass: 'fa-eye',
+        eyeCloseClass: 'fa-eye-slash',
         eyeClassPositionInside: false
     };
 
