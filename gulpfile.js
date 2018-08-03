@@ -16,15 +16,18 @@ banner = [
     ''].join('\n');
 
 gulp.task('clean', function(cb) {
-    del(['./bootstrap-show-password.min.js'], cb);
+    return del(['./bootstrap-show-password.min.js'], cb);
 });
 
-gulp.task('js', ['clean'], function () {
+gulp.task('js', gulp.series('clean', function (done) {
     gulp.src('bootstrap-show-password.js')
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(header(banner, {pkg: pkg}))
         .pipe(gulp.dest('.'));
-});
+    done();
+}));
 
-gulp.task('default', ['js']);
+gulp.task('default', gulp.series('js', function(done) {
+    done();
+}));

@@ -70,8 +70,9 @@
         this.$element.wrap(sprintf('<div class="%s input-group" />', inputClass));
 
         this.$text = $('<input type="text" />')
-            [placementFuc](this.$element)
+            [placementFuc](thiOBs.$element)
             .attr('class', this.$element.attr('class'))
+            .attr('maxlength', this.$element.attr('maxlength'))
             .attr('style', this.$element.attr('style'))
             .attr('placeholder', this.$element.attr('placeholder'))
             .css('display', this.$element.css('display'))
