@@ -1,5 +1,5 @@
-Multiple Select is a free plug-in which be made in my spare time.
+Bootstrap Show Password is a free plug-in which be made in my spare time.
 
-If your project get the help from Multiple Select, you can donate to Multiple Select.
+If your project get the help from Bootstrap Show Password, you can donate to Bootstrap Show Password.
 
-With your help, I believe that I will continue to strive to let Multiple Select be better.
+With your help, I believe that I will continue to strive to let Bootstrap Show Password be better.

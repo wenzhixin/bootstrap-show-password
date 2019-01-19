@@ -1,7 +1,7 @@
 ### Features
 
-* Default option allows showing a checkbox.
-* Ability to grouping elements.
-* Supports to show multiple items in a single row.
-* Select all options.
-* Feature to show placeholder.
+* Show/Hide password for a normal input element
+* Support all bootstrap version
+* Set placement of icon
+* Custom icons
+* Options can be passed via data attributes or JavaScript

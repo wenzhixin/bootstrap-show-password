@@ -2,65 +2,33 @@
 
 ---
 
-Include `multiple-select.min.css` in the head tag your html document.
-
-```html
-<link rel="stylesheet" href="multiple-select.min.css">
-```
-
-Include jQuery library and `multiple-select.min.js` in the head tag or at the very bottom of your document, just before the closing body tag (usually recommended for better performance).
+Include jQuery library, bootstrap library (if your project doesn't use it already) and `bootstrap-show-password.js` in the head tag or at the very bottom of your document, just before the closing body tag (usually recommended for better performance).
 
 ```html
 <script src="jquery.min.js"></script>
-<script src="multiple-select.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="bootstrap-show-password.js"></script>
 ```
 
 ---
 
-The Multiple Select plugin displays data in a tabular format, via data attributes or JavaScript.
+The plugin acts on `<input>` elements (typically password fields).
 
 ## Via data attributes
 
-Activate Multiple Select without writing JavaScript. Set `data-toggle="select"` on a normal select.
+Activate Bootstrap Show Password without writing JavaScript. Set `data-toggle="password"` on a normal input.
 
 ```html
-<select multiple="multiple" data-toggle="select">
-    <option value="1">January</option>
-    ...
-    <option value="12">December</option>
-</select>
+<input class="form-control" type="password" data-toggle="password">
 ```
-
-We can also use remote url data by setting `data-url="data1.json"` on a normal select.
-
-```html
-<select data-toggle="select" data-url="data1.json"></select>
-```
-
 ## Via JavaScript
 
-Call a multiple select with id select with JavaScript.
+Call a Bootstrap Show Password with id select with JavaScript.
 
 ```html
-<select id="select" multiple="multiple">
-    <option value="1">January</option>
-    ...
-    <option value="12">December</option>
-</select>
+<input id="password" class="form-control" type="password">
 ```
 
 ```js
-$('#select').multipleSelect();
-```
-
-We can also use remote url data by setting `url: 'data1.json'`.
-
-```html
-<select id="select" multiple="multiple"></select>
-```
-
-```js
-$('#select').multipleSelect({
-    url: 'data1.json'
-});
+$('#password').password();
 ```

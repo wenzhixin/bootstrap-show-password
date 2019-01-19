@@ -17,8 +17,8 @@ $(function () {
 
 window._config = {
   isDebug: true || location.hash.slice(1) === 'is-debug',
-  cdnUrl: 'https://unpkg.com/multiple-select/',
-  localUrl: 'http://localhost:8080/github/multiple-select/'
+  cdnUrl: 'https://unpkg.com/bootstrap-show-password/',
+  localUrl: 'http://localhost:8080/github/bootstrap-show-password/'
 }
 
 function _link(file) {
