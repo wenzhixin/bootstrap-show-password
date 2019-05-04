@@ -1,7 +1,7 @@
 pages:
   home:
     title: "Bootstrap Show Password"
-    lead: "Bootstrap Show Password is a plugin to show/hide password plugin."
+    lead: "Bootstrap Show Password is a show/hide password plugin."
     sub_title: "Designed for twitter bootstrap"
     sub_lead: "Bootstrap Show Password has been designed to reduce development time and to require no specific knowledge from developers. It is both featherweight and feature-rich."
     download: "Download"
