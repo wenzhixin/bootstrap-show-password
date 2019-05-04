@@ -1,0 +1,23 @@
+pages:
+  home:
+    title: "Bootstrap Show Password"
+    lead: "Bootstrap Show Password es un módulo para mostrar/ocultar contraseñas."
+    sub_title: "Diseñada para ser usada con el proyecto Bootstrap de Twitter"
+    sub_lead: "Bootstrap Mostrar contraseña ha sido diseñado para reducir el tiempo de desarrollo y no requiere de conocimientos específicos de parte de sus desarrolladores. Es liviano y rico en funciones."
+    download: "Descargar"
+    current_version: "Versión actual:"
+  getting_started:
+    title: "Empezando"
+    lead: "Una descripción general de Bootstrap Show Password, cómo descargar y usarlo, plantillas básicas y más."
+  examples:
+    title: "Ejemplos"
+    lead: "Los ejemplos de Bootstrap Show Password."
+  documentation:
+    title: "Documentación"
+    lead: "La documentación contiene el Constructor, Eventos, Métodos."
+  donate:
+    title: "Donar"
+    lead: "Si le gusta Bootstrap Show Password, si su proyecto usa Bootstrap Show Password, si desea que Bootstrap Show Password mejore..."
+common:
+  social_tip: "Si le gusta Bootstrap Show Password: "
+  help: "Preguntas/Ayudas: "
