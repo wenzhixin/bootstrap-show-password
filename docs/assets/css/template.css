@@ -1,0 +1,38 @@
+.bs-docs-header {
+  padding: 10px 0 0;
+}
+
+.bs-docs-header .col-md-8 {
+  padding: 0 0 20px;
+}
+
+.bs-docs-header h1 {
+  margin-top: 20px;
+  margin-right: 0;
+}
+
+.bs-docs-header div {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.bs-docs-header a,
+.bs-docs-header code {
+  color: #fff;
+}
+
+.source-pre {
+  padding: 1.5rem;
+}
+
+.source-pre,
+.hljs {
+  background: #f8f9fa;
+}
+
+#example {
+  padding: 1.5rem;
+  margin-right: 0;
+  margin-left: 0;
+  border: .2rem solid #f8f9fa;
+}

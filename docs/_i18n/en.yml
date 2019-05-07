@@ -1,0 +1,23 @@
+pages:
+  home:
+    title: "Bootstrap Show Password"
+    lead: "Bootstrap Show Password is a show/hide password plugin."
+    sub_title: "Designed for twitter bootstrap"
+    sub_lead: "Bootstrap Show Password has been designed to reduce development time and to require no specific knowledge from developers. It is both featherweight and feature-rich."
+    download: "Download"
+    current_version: "Current version:"
+  getting_started:
+    title: "Getting started"
+    lead: "An overview of Bootstrap Show Password, how to download and use, basic templates, and more."
+  examples:
+    title: "Examples"
+    lead: "The examples of Bootstrap Show Password."
+  documentation:
+    title: "Documentation"
+    lead: "The documentation contains Constructor, Events, Methods."
+  donate:
+    title: "Donate"
+    lead: "If you like Bootstrap Show Password, if your project uses Bootstrap Show Password, if you want Bootstrap Show Password do better..."
+common:
+  social_tip: "If you like Bootstrap Show Password: "
+  help: "Questions/Helps: "

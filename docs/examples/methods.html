@@ -1,0 +1,58 @@
+<script>
+  init({
+    title: 'The Methods',
+    desc: 'The methods of bootstrap show password.',
+    scripts: ['bootstrap-show-password.min.js']
+  })
+</script>
+
+<style>
+.mb20 {
+  margin-bottom: 20px;
+}
+</style>
+
+<div class="mb20">
+  <button class="btn btn-secondary" id="show">Show</button>
+  <button class="btn btn-secondary" id="hide">Hide</button>
+  <button class="btn btn-secondary" id="toggle">Toggle</button>
+  <button class="btn btn-secondary" id="get">Get Value</button>
+  <button class="btn btn-secondary" id="set">Set Value</button>
+  <button class="btn btn-secondary" id="focus">Focus</button>
+</div>
+
+<input
+  id="password"
+  class="form-control"
+  type="password"
+  placeholder="Enter the password">
+
+<script>
+  function mounted() {
+    var $password = $('#password').password()
+
+    $('#show').click(function () {
+      $password.password('show')
+    })
+
+    $('#hide').click(function () {
+      $password.password('hide')
+    })
+
+    $('#toggle').click(function () {
+      $password.password('toggle')
+    })
+
+    $('#set').click(function () {
+      $password.password('val', 'password')
+    })
+
+    $('#get').click(function () {
+      alert($password.password('val'))
+    })
+
+    $('#focus').click(function () {
+      $password.password('focus')
+    })
+  }
+</script>

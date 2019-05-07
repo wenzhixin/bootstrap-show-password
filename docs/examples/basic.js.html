@@ -1,0 +1,20 @@
+<script>
+  init({
+    title: 'The Basic',
+    desc: 'The basic usage on a normal input.',
+    scripts: ['bootstrap-show-password.min.js']
+  })
+</script>
+
+<input
+  id="password"
+  class="form-control"
+  type="password"
+  maxlength="10"
+  placeholder="Enter the password">
+
+<script>
+  function mounted() {
+    $('#password').password()
+  }
+</script>
