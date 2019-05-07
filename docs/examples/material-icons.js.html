@@ -1,0 +1,31 @@
+<script>
+  init({
+    title: 'Material Icons',
+    desc: 'Use Material Icons.',
+    links: ['https://fonts.googleapis.com/icon?family=Material+Icons'],
+    scripts: ['bootstrap-show-password.min.js']
+  })
+</script>
+
+<style>
+.material-icons {
+  font-size: 16px;
+}
+</style>
+
+<input
+  id="password"
+  class="form-control"
+  type="password"
+  placeholder="Enter the password">
+
+<script>
+  function mounted() {
+    $('#password').password({
+      esyClass: 'material-icons',
+      eyeOpenClass: 'visibility',
+      eyeCloseClass: 'visibility_off',
+      eyeClassPositionInside: true
+    })
+  }
+</script>

@@ -2,13 +2,14 @@
   "name": "bootstrap-show-password",
   "version": "1.1.2",
   "description": "Show/hide password plugin for twitter bootstrap.",
-  "main": "bootstrap-show-password.js",
+  "main": "dist/bootstrap-show-password.min.js",
   "devDependencies": {
-    "del": "^0.1.2",
-    "gulp": "^3.8.7",
-    "gulp-header": "^1.1.1",
-    "gulp-rename": "^1.2.0",
-    "gulp-uglify": "^0.3.1"
+    "eslint": "^5.16.0"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "docs": "bundle exec jekyll build",
+    "docs-serve": "bundle exec jekyll serve"
   },
   "author": "zhixin wen <wenzhixin2010@gmail.com>",
   "repository": {

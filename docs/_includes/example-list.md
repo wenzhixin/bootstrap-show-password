@@ -1,0 +1,8 @@
+<li><a href="../examples#basic.html">The Basic</a></li>
+<li><a href="../examples#placement.html">The Placement</a></li>
+<li><a href="../examples#message.html">The Message</a></li>
+<li><a href="../examples#eye-class.html">Custom Eye Class</a></li>
+<li><a href="../examples#material-icons.html">Material Icons</a></li>
+<li><a href="../examples#events.html">The Events</a></li>
+<li><a href="../examples#methods.html">The Methods</a></li>
+<li><a href="../examples?v3#basic.html">Bootstrap v3</a></li>

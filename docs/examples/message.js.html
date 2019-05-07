@@ -1,0 +1,21 @@
+<script>
+  init({
+    title: 'The Message',
+    desc: 'Use <code>message</code> to set the tooltip of show/hide icon.',
+    scripts: ['bootstrap-show-password.min.js']
+  })
+</script>
+
+<input
+  id="password"
+  class="form-control"
+  type="password"
+  placeholder="Enter the password">
+
+<script>
+  function mounted() {
+    $('#password').password({
+      message: 'Show/Hide Password'
+    })
+  }
+</script>

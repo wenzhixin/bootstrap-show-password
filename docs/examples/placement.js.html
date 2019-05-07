@@ -1,0 +1,21 @@
+<script>
+  init({
+    title: 'The Placement',
+    desc: 'Use <code>placement</code> to set the placement of show/hide icon.',
+    scripts: ['bootstrap-show-password.min.js']
+  })
+</script>
+
+<input
+  id="password"
+  class="form-control"
+  type="password"
+  placeholder="Enter the password">
+
+<script>
+  function mounted() {
+    $('#password').password({
+      placement: 'before'
+    })
+  }
+</script>
