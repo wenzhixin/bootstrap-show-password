@@ -20,7 +20,7 @@ Your feedback is very appreciated!
 
 ## Release History
 
-Look at the [Change Log](https://github.com/wenzhixin/bootstrap-table/blob/master/CHANGELOG.md)
+Look at the [Change Log](https://github.com/wenzhixin/bootstrap-show-password/blob/master/CHANGELOG.md)
 
 ## LICENSE
 
