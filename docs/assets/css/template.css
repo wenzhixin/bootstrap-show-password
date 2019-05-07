@@ -16,10 +16,23 @@
   line-height: 24px;
 }
 
-.bs-docs-header a {
+.bs-docs-header a,
+.bs-docs-header code {
   color: #fff;
 }
 
 .source-pre {
-  margin-top: 20px;
+  padding: 1.5rem;
+}
+
+.source-pre,
+.hljs {
+  background: #f8f9fa;
+}
+
+#example {
+  padding: 1.5rem;
+  margin-right: 0;
+  margin-left: 0;
+  border: .2rem solid #f8f9fa;
 }

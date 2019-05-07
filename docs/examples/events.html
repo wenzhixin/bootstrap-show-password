@@ -1,0 +1,27 @@
+<script>
+  init({
+    title: 'The Events',
+    desc: 'The events of bootstrap show password.',
+    scripts: ['bootstrap-show-password.min.js']
+  })
+</script>
+
+<input
+  id="password"
+  class="form-control"
+  type="password"
+  placeholder="Enter the password">
+
+<textarea class="form-control" readonly rows="6"></textarea>
+
+<script>
+  function mounted() {
+    $('#password').password()
+      .on('show.bs.password', function () {
+          $('textarea').append('show.bs.password event fire!\n')
+      })
+      .on('hide.bs.password', function () {
+          $('textarea').append('hide.bs.password event fire!\n')
+      })
+  }
+</script>
