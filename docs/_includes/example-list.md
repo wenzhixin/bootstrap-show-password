@@ -1,4 +1,5 @@
 <li><a href="../examples#basic.html">The Basic</a></li>
+<li><a href="../examples#disabled.html">The Disabled</a></li>
 <li><a href="../examples#placement.html">The Placement</a></li>
 <li><a href="../examples#message.html">The Message</a></li>
 <li><a href="../examples#eye-class.html">Custom Eye Class</a></li>

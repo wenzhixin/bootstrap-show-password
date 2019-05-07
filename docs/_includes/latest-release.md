@@ -1,6 +1,10 @@
-### Latest release (2018-12-21)
+### Latest release (2019-05-08)
 
-### 1.1.2
+### 1.2.0
 
-* [enh] Add focus method.
-* [enh] Add support for google material design icons, by usgin the data-eye-class-position-inside property.
+- **New:** Rewrote the src to ES6.
+- **New:** Supported bootstrap v4.
+- **New:** Use Font Awesome v5 as default.
+- **New:** Supported `maxlength` attribute.
+- **New:** Supported `disabled` attribute.
+- **New:** Updated the docs and added examples.

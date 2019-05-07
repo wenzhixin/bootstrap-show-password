@@ -1,7 +1,7 @@
 <script>
   init({
     title: 'The Basic',
-    desc: 'The basic usage on a normal input.',
+    desc: 'The basic usage on a disabled input.',
     scripts: ['bootstrap-show-password.min.js']
   })
 </script>
@@ -11,7 +11,8 @@
   class="form-control"
   type="password"
   maxlength="10"
-  placeholder="Enter the password">
+  disabled="disabled"
+  value="my-password">
 
 <script>
   function mounted() {

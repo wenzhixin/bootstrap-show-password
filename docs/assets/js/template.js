@@ -36,7 +36,7 @@ window._config = {
   isDebug: location.hash.slice(1) === 'is-debug' ||
   ['localhost'].indexOf(location.hostname) > -1,
   cdnUrl: 'https://unpkg.com/bootstrap-show-password/',
-  localUrl: 'http://localhost:8080/github/bootstrap-show-password/src/'
+  localUrl: 'http://localhost:8080/github/bootstrap-show-password/dist/'
 }
 
 function _getLink(file) {

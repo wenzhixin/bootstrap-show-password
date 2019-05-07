@@ -1,9 +1,9 @@
 {
   "name": "bootstrap-show-password",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Show/hide password plugin for twitter bootstrap.",
   "main": "dist/bootstrap-show-password.min.js",
-  "module": "dist/bootstrap-show-password-es.min.js",
+  "module": "dist/bootstrap-show-password.esm.min.js",
   "devDependencies": {
     "@babel/preset-env": "^7.4.4",
     "eslint": "^5.16.0",

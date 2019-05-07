@@ -27,7 +27,7 @@ languages: ["en"]
 languages_string: ["English"]
 
 # Custom vars
-current_version: 1.1.2
+current_version: 1.2.0
 repo: https://github.com/wenzhixin/bootstrap-show-password
 website: http://wenzhixin.net.cn
 repos: http://repos.wenzhixin.net.cn
