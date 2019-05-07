@@ -86,6 +86,7 @@ class Password {
       .attr('style', this.$element.attr('style'))
       .attr('placeholder', this.$element.attr('placeholder'))
       .attr('maxlength', this.$element.attr('maxlength'))
+      .attr('disabled', this.$element.attr('disabled'))
       .css('display', this.$element.css('display'))
       .val(this.$element.val()).hide()
 
