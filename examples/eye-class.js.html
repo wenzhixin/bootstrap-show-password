@@ -1,0 +1,22 @@
+<script>
+  init({
+    title: 'Custom Eye Class',
+    desc: 'Use <code>eyeOpenClass</code> and <code>eyeCloseClass</code> to set the open/close eye icon class.',
+    scripts: ['bootstrap-show-password.min.js']
+  })
+</script>
+
+<input
+  id="password"
+  class="form-control"
+  type="password"
+  placeholder="Enter the password">
+
+<script>
+  function mounted() {
+    $('#password').password({
+      eyeOpenClass: 'fa-toggle-off',
+      eyeCloseClass: 'fa-toggle-on'
+    })
+  }
+</script>
