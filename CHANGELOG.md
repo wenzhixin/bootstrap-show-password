@@ -3,6 +3,7 @@
 ### 1.2.1
 
 - **New:** Added font-awesome svg support.
+- **New:** Added `size` option of the input group.
 
 ### 1.2.0
 
