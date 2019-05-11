@@ -9,7 +9,7 @@ function loadUrl(url) {
   } else if (location.search.slice(1) === 'is-debug') {
     hash = '#is-debug'
   }
-  $('iframe').attr('src', template + '?v=3&' + url + hash)
+  $('iframe').attr('src', template + '?v=4&' + url + hash)
 }
 
 function initNavigation(href) {
