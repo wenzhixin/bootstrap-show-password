@@ -1,8 +1,8 @@
 $(function () {
-  var url = location.search.replace(/\?v=\d+&/, '').replace(/\?v=4&/, '')
+  var url = location.search.replace(/\?v=\d+&/, '').replace(/\?v=5&/, '')
   $.ajax({
     type: 'GET',
-    url: url + '?v=4', // todo: add version to solve cache problem
+    url: url + '?v=5', // todo: add version to solve cache problem
     dataType: 'html',
     global: false,
     cache: true, // (warning: setting it to false will cause a timestamp and will call the request twice)
@@ -135,14 +135,37 @@ function _beautifySource(data) {
   var obj = eval('(' + strings.join('').replace(/[^\u0000-\u007E]/g, '')
     .replace(/^init\((.*)\)$/, '$1') + ')')
 
-  var result = [
-    '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">',
-    '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">'
-  ]
+  var theme = location.pathname.replace('/examples/template', '')
+    .replace('-', '').replace('.html', '')
+  var result = []
+
+  if (theme === 'v3') {
+    result.push(
+      '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">'
+    )
+  } else if (theme === 'svg') {
+    result.push(
+      '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">'
+    )
+  } else {
+    result.push(
+      '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">',
+      '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">'
+    )
+  }
   result = result.concat($.map(obj.links, _getLink))
   result.push('')
 
   result.push('<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>')
+  if (theme === 'v3') {
+    result.push(
+      '<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>'
+    )
+  } else if (theme === 'svg') {
+    result.push(
+      '<script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>'
+    )
+  }
   result = result.concat($.map(obj.scripts, function (script) {
     return _getScript(script, true)
   }))

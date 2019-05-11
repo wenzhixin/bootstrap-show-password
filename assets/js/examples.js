@@ -3,13 +3,15 @@ function loadUrl(url) {
   var hash = ''
   if (/v3$/.test(location.search)) {
     template = 'template-v3.html'
+  } else if (/svg$/.test(location.search)) {
+    template = 'template-svg.html'
   }
   if (location.search.slice(1) === 'view-source') {
     hash = '#view-source'
   } else if (location.search.slice(1) === 'is-debug') {
     hash = '#is-debug'
   }
-  $('iframe').attr('src', template + '?v=4&' + url + hash)
+  $('iframe').attr('src', template + '?v=5&' + url + hash)
 }
 
 function initNavigation(href) {

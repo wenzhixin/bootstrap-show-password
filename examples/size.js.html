@@ -1,0 +1,45 @@
+<script>
+  init({
+    title: 'The Placement',
+    desc: 'Use <code>size</code> to set the size of the input group.',
+    scripts: ['bootstrap-show-password.min.js']
+  })
+</script>
+
+<style>
+.input-group {
+  margin-bottom: 10px;
+}
+</style>
+
+<input
+  id="sm"
+  class="form-control"
+  type="password"
+  placeholder="Enter the password">
+
+<input
+  id="default"
+  class="form-control"
+  type="password"
+  placeholder="Enter the password">
+
+<input
+  id="lg"
+  class="form-control"
+  type="password"
+  placeholder="Enter the password">
+
+<script>
+function mounted() {
+  $('#sm').password({
+    size: 'sm'
+  })
+
+  $('#default').password()
+
+  $('#lg').password({
+    size: 'lg'
+  })
+}
+</script>
