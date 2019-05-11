@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.2.1
+
+- **New:** Added font-awesome svg support.
+
 ### 1.2.0
 
 - **New:** Rewrote the src to ES6.

@@ -7,3 +7,4 @@
 <li><a href="../examples#events.html">The Events</a></li>
 <li><a href="../examples#methods.html">The Methods</a></li>
 <li><a href="../examples?v3#basic.html">Bootstrap v3</a></li>
+<li><a href="../examples?svg#basic.html">Font Awesome SVG</a></li>

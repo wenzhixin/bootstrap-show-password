@@ -3,6 +3,8 @@ function loadUrl(url) {
   var hash = ''
   if (/v3$/.test(location.search)) {
     template = 'template-v3.html'
+  } else if (/svg$/.test(location.search)) {
+    template = 'template-svg.html'
   }
   if (location.search.slice(1) === 'view-source') {
     hash = '#view-source'
