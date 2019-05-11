@@ -18,17 +18,17 @@ Source JavaScript, along with our docs.
 
 ## CDN
 
-The folks over at [CDNJS](http://www.cdnjs.com/libraries/bootstrap-show-password) and [bootcss](http://open.bootcss.com/bootstrap-show-password/) graciously provide CDN support for CSS and JavaScript of Bootstrap Show Password. Just use these CDN links.
+The folks over at [UNPKG](https://unpkg.com/) graciously provide CDN support for CSS and JavaScript of Bootstrap Show Password. Just use these CDN links.
 
 ```html
 <!-- Latest compiled and minified JavaScript -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-show-password/{{ site.current_version }}/bootstrap-show-password.min.js"></script>
+<script src="https://unpkg.com/bootstrap-show-password@{{ site.current_version }}/dist/bootstrap-show-password.min.js"></script>
 ```
 
-## Bower
+## NPM
 
-Install and manage Bootstrap Show Password's CSS, JavaScript using [Bower](http://bower.io/).
+Install and manage Bootstrap Show Password's CSS, JavaScript using [NPM](http://npmjs.com).
 
 ```bash
-$ bower install bootstrap-show-password
+$ npm install bootstrap-show-password
 ```
