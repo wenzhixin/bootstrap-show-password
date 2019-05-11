@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-show-password",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Show/hide password plugin for twitter bootstrap.",
   "main": "dist/bootstrap-show-password.min.js",
   "module": "dist/bootstrap-show-password.esm.min.js",

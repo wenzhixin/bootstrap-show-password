@@ -1,7 +1,7 @@
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
  * https://github.com/wenzhixin/bootstrap-show-password
- * version: 1.2.0
+ * version: 1.2.1
  */
 
 let bootstrapVersion = 4
