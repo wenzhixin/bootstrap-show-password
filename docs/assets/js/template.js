@@ -35,7 +35,7 @@ $(function () {
 window._config = {
   isDebug: location.hash.slice(1) === 'is-debug' ||
   ['localhost'].indexOf(location.hostname) > -1,
-  cdnUrl: 'https://unpkg.com/bootstrap-show-password/dist/',
+  cdnUrl: 'https://unpkg.com/bootstrap-show-password@1.2.1/dist/',
   localUrl: 'http://localhost:8080/github/bootstrap-show-password/src/'
 }
 
