@@ -1184,7 +1184,7 @@ function _createClass(Constructor, protoProps, staticProps) {
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
  * https://github.com/wenzhixin/bootstrap-show-password
- * version: 1.2.0
+ * version: 1.2.1
  */
 var bootstrapVersion = 4;
 
@@ -1261,7 +1261,7 @@ function () {
       } // Create the text, icon and assign
 
 
-      this.$element.wrap('<div class="input-group" />');
+      this.$element.wrap("<div class=\"input-group".concat(sprintf(' input-group-%s', this.options.size), "\" />"));
       this.$text = $('<input type="text" />')[placementFuc](this.$element).attr('class', this.$element.attr('class')).attr('style', this.$element.attr('style')).attr('placeholder', this.$element.attr('placeholder')).attr('maxlength', this.$element.attr('maxlength')).attr('disabled', this.$element.attr('disabled')).css('display', this.$element.css('display')).val(this.$element.val()).hide(); // Copy readonly attribute if it's set
 
       if (this.$element.prop('readonly')) this.$text.prop('readonly', true);
@@ -1293,9 +1293,9 @@ function () {
       this.$text.show();
 
       if (this.options.eyeClassPositionInside) {
-        this.$icon.find('i').removeClass('icon-eye-open').addClass('icon-eye-close').html(this.options.eyeCloseClass);
+        this.$icon.find('i,svg').removeClass('icon-eye-open').addClass('icon-eye-close').html(this.options.eyeCloseClass);
       } else {
-        this.$icon.find('i').removeClass("icon-eye-open ".concat(this.options.eyeOpenClass)).addClass("icon-eye-close ".concat(this.options.eyeCloseClass));
+        this.$icon.find('i,svg').removeClass("icon-eye-open ".concat(this.options.eyeOpenClass)).addClass("icon-eye-close ".concat(this.options.eyeCloseClass));
       }
 
       this.$text[this.options.placement](this.$element);
@@ -1312,9 +1312,9 @@ function () {
       this.$text.hide();
 
       if (this.options.eyeClassPositionInside) {
-        this.$icon.find('i').removeClass('icon-eye-close').addClass('icon-eye-open').html(this.options.eyeOpenClass);
+        this.$icon.find('i,svg').removeClass('icon-eye-close').addClass('icon-eye-open').html(this.options.eyeOpenClass);
       } else {
-        this.$icon.find('i').removeClass("icon-eye-close ".concat(this.options.eyeCloseClass)).addClass("icon-eye-open ".concat(this.options.eyeOpenClass));
+        this.$icon.find('i,svg').removeClass("icon-eye-close ".concat(this.options.eyeCloseClass)).addClass("icon-eye-open ".concat(this.options.eyeOpenClass));
       }
 
       this.$element[this.options.placement](this.$text);
@@ -1343,6 +1343,8 @@ Password.DEFAULTS = {
   placement: 'after',
   // 'before' or 'after'
   message: 'Click here to show/hide password',
+  size: undefined,
+  // '', 'sm', 'large'
   eyeClass: 'fa',
   // 'glyphicon',
   eyeOpenClass: 'fa-eye',

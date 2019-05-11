@@ -1,7 +1,7 @@
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
  * https://github.com/wenzhixin/bootstrap-show-password
- * version: 1.2.0
+ * version: 1.2.1
  */
 
 let bootstrapVersion = 4
@@ -79,7 +79,7 @@ class Password {
     }
 
     // Create the text, icon and assign
-    this.$element.wrap('<div class="input-group" />')
+    this.$element.wrap(`<div class="input-group${sprintf(' input-group-%s', this.options.size)}" />`)
 
     this.$text = $('<input type="text" />')[placementFuc](this.$element)
       .attr('class', this.$element.attr('class'))
@@ -125,12 +125,12 @@ class Password {
     this.$element.hide()
     this.$text.show()
     if (this.options.eyeClassPositionInside) {
-      this.$icon.find('i')
+      this.$icon.find('i,svg')
         .removeClass('icon-eye-open')
         .addClass('icon-eye-close')
         .html(this.options.eyeCloseClass)
     } else {
-      this.$icon.find('i')
+      this.$icon.find('i,svg')
         .removeClass(`icon-eye-open ${this.options.eyeOpenClass}`)
         .addClass(`icon-eye-close ${this.options.eyeCloseClass}`)
     }
@@ -146,12 +146,12 @@ class Password {
     this.$element.show()
     this.$text.hide()
     if (this.options.eyeClassPositionInside) {
-      this.$icon.find('i')
+      this.$icon.find('i,svg')
         .removeClass('icon-eye-close')
         .addClass('icon-eye-open')
         .html(this.options.eyeOpenClass)
     } else {
-      this.$icon.find('i')
+      this.$icon.find('i,svg')
         .removeClass(`icon-eye-close ${this.options.eyeCloseClass}`)
         .addClass(`icon-eye-open ${this.options.eyeOpenClass}`)
     }
@@ -176,6 +176,7 @@ class Password {
 Password.DEFAULTS = {
   placement: 'after', // 'before' or 'after'
   message: 'Click here to show/hide password',
+  size: undefined, // '', 'sm', 'large'
   eyeClass: 'fa', // 'glyphicon',
   eyeOpenClass: 'fa-eye', // 'glyphicon-eye-open',
   eyeCloseClass: 'fa-eye-slash', // 'glyphicon-eye-close',

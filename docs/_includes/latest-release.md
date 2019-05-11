@@ -1,4 +1,9 @@
-### Latest release (2019-05-08)
+### Latest release (2019-05-11)
+
+### 1.2.1
+
+- **New:** Added font-awesome svg support.
+- **New:** Added `size` option of the input group.
 
 ### 1.2.0
 
