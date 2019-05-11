@@ -79,7 +79,7 @@ class Password {
     }
 
     // Create the text, icon and assign
-    this.$element.wrap('<div class="input-group" />')
+    this.$element.wrap(`<div class="input-group${sprintf(' input-group-%s', this.options.size)}" />`)
 
     this.$text = $('<input type="text" />')[placementFuc](this.$element)
       .attr('class', this.$element.attr('class'))
@@ -176,6 +176,7 @@ class Password {
 Password.DEFAULTS = {
   placement: 'after', // 'before' or 'after'
   message: 'Click here to show/hide password',
+  size: undefined, // '', 'sm', 'large'
   eyeClass: 'fa', // 'glyphicon',
   eyeOpenClass: 'fa-eye', // 'glyphicon-eye-open',
   eyeCloseClass: 'fa-eye-slash', // 'glyphicon-eye-close',

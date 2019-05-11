@@ -2,6 +2,7 @@
 <li><a href="../examples#disabled.html">The Disabled</a></li>
 <li><a href="../examples#placement.html">The Placement</a></li>
 <li><a href="../examples#message.html">The Message</a></li>
+<li><a href="../examples#size.html">The Size</a></li>
 <li><a href="../examples#eye-class.html">Custom Eye Class</a></li>
 <li><a href="../examples#material-icons.html">Material Icons</a></li>
 <li><a href="../examples#events.html">The Events</a></li>
