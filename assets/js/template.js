@@ -1,8 +1,8 @@
 $(function () {
-  var url = location.search.replace(/\?v=\d+&/, '').replace(/\?v=5&/, '')
+  var url = location.search.replace(/\?v=\d+&/, '').replace(/\?v=6&/, '')
   $.ajax({
     type: 'GET',
-    url: url + '?v=5', // todo: add version to solve cache problem
+    url: url + '?v=6', // todo: add version to solve cache problem
     dataType: 'html',
     global: false,
     cache: true, // (warning: setting it to false will cause a timestamp and will call the request twice)
@@ -35,7 +35,7 @@ $(function () {
 window._config = {
   isDebug: location.hash.slice(1) === 'is-debug' ||
   ['localhost'].indexOf(location.hostname) > -1,
-  cdnUrl: 'https://unpkg.com/bootstrap-show-password/dist/',
+  cdnUrl: 'https://unpkg.com/bootstrap-show-password@1.2.1/dist/',
   localUrl: 'http://localhost:8080/github/bootstrap-show-password/src/'
 }
 
