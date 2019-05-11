@@ -125,12 +125,12 @@ class Password {
     this.$element.hide()
     this.$text.show()
     if (this.options.eyeClassPositionInside) {
-      this.$icon.find('i')
+      this.$icon.find('i,svg')
         .removeClass('icon-eye-open')
         .addClass('icon-eye-close')
         .html(this.options.eyeCloseClass)
     } else {
-      this.$icon.find('i')
+      this.$icon.find('i,svg')
         .removeClass(`icon-eye-open ${this.options.eyeOpenClass}`)
         .addClass(`icon-eye-close ${this.options.eyeCloseClass}`)
     }
@@ -146,12 +146,12 @@ class Password {
     this.$element.show()
     this.$text.hide()
     if (this.options.eyeClassPositionInside) {
-      this.$icon.find('i')
+      this.$icon.find('i,svg')
         .removeClass('icon-eye-close')
         .addClass('icon-eye-open')
         .html(this.options.eyeOpenClass)
     } else {
-      this.$icon.find('i')
+      this.$icon.find('i,svg')
         .removeClass(`icon-eye-close ${this.options.eyeCloseClass}`)
         .addClass(`icon-eye-open ${this.options.eyeOpenClass}`)
     }
