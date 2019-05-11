@@ -48,7 +48,7 @@ function _getLink(file) {
       url = window._config.localUrl + file.replace(/\.min/, '') + '?t=' + (+new Date())
     }
   }
-  return '<link href="' + url + '" rel="stylesheet">'
+  return '<link rel="stylesheet" href="' + url + '">'
 }
 
 function _getScript(file, isScriptTag) {
@@ -135,9 +135,14 @@ function _beautifySource(data) {
   var obj = eval('(' + strings.join('').replace(/[^\u0000-\u007E]/g, '')
     .replace(/^init\((.*)\)$/, '$1') + ')')
 
-  var result = []
+  var result = [
+    '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">',
+    '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">'
+  ]
   result = result.concat($.map(obj.links, _getLink))
   result.push('')
+
+  result.push('<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>')
   result = result.concat($.map(obj.scripts, function (script) {
     return _getScript(script, true)
   }))
@@ -147,10 +152,6 @@ function _beautifySource(data) {
   var mountedEnd = lines.indexOf('  }', mountedStart)
   lines[mountedStart] = '  $(function() {'
   lines[mountedEnd] = '  })'
-
-  if (lines[0] === '') {
-    lines = lines.slice(1)
-  }
 
   return lines.join('\n')
 }
