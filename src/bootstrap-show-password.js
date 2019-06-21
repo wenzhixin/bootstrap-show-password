@@ -73,7 +73,7 @@ class Password {
       placementFuc = 'insertBefore'
       inputClass = 'input-group-prepend'
     } else {
-      this.options.placement = 'after' // default to after
+      // default to 'after' placement
       placementFuc = 'insertAfter'
       inputClass = 'input-group-append'
     }
@@ -135,7 +135,7 @@ class Password {
         .addClass(`icon-eye-close ${this.options.eyeCloseClass}`)
     }
 
-    this.$text[this.options.placement](this.$element)
+    this.$element[placementFuc](this.$text)
   }
 
   hide (_relatedTarget) {
@@ -156,7 +156,7 @@ class Password {
         .addClass(`icon-eye-open ${this.options.eyeOpenClass}`)
     }
 
-    this.$element[this.options.placement](this.$text)
+    this.$text[placementFuc](this.$element)
   }
 
   val (value) {
