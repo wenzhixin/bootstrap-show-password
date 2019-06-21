@@ -66,26 +66,39 @@ class Password {
   }
 
   init () {
-    let placementFuc
+    let elPlacementFuc
+    let iconPlacementFuc
     let inputClass
 
     if (this.options.placement === 'before') {
-      placementFuc = $.fn.insertBefore
+      elPlacementFuc = $.fn.insertBefore
+      iconPlacementFuc = $.fn.insertBefore
       inputClass = 'input-group-prepend'
+    } else if (this.options.placement === 'noWrap') {
+      elPlacementFuc = $.fn.insertAfter
+      iconPlacementFuc = function($target) {
+        this.appendTo($target.parent());
+        return this;
+      };
+      inputClass = 'input-group-append'
     } else {
       // default to 'after' placement
-      placementFuc = $.fn.insertAfter
+      elPlacementFuc = $.fn.insertAfter
+      iconPlacementFuc = $.fn.insertAfter
       inputClass = 'input-group-append'
     }
 
     (function( $ ){
-       $.fn.placementFuc = placementFuc
+      $.fn.elPlacementFuc = elPlacementFuc;
+      $.fn.iconPlacementFuc = iconPlacementFuc;
     })( jQuery );
 
-    // Create the text, icon and assign
-    this.$element.wrap(`<div class="input-group${sprintf(' input-group-%s', this.options.size)}" />`)
+    if (this.options.placement !== 'noWrap') {
+      // Create the text, icon and assign
+      this.$element.wrap(`<div class="input-group${sprintf(' input-group-%s', this.options.size)}" />`)
+    }
 
-    this.$text = $('<input type="text" />').placementFuc(this.$element)
+    this.$text = $('<input type="text" />').elPlacementFuc(this.$element)
       .attr('class', this.$element.attr('class'))
       .attr('style', this.$element.attr('style'))
       .attr('placeholder', this.$element.attr('placeholder'))
@@ -103,7 +116,7 @@ class Password {
       ${this.options.eyeClassPositionInside ? this.options.eyeOpenClass : ''}
       </i>`,
       Constants.html.inputGroups[1]
-    ].join('')).placementFuc(this.$text).css('cursor', 'pointer')
+    ].join('')).iconPlacementFuc(this.$text).css('cursor', 'pointer');
 
     // events
     this.$text.off('keyup').on('keyup', $.proxy(function () {
@@ -139,7 +152,7 @@ class Password {
         .addClass(`icon-eye-close ${this.options.eyeCloseClass}`)
     }
 
-    this.$element.placementFuc(this.$text)
+    this.$element.elPlacementFuc(this.$text)
   }
 
   hide (_relatedTarget) {
@@ -160,7 +173,7 @@ class Password {
         .addClass(`icon-eye-open ${this.options.eyeOpenClass}`)
     }
 
-    this.$text.placementFuc(this.$element)
+    this.$text.elPlacementFuc(this.$element)
   }
 
   val (value) {
