@@ -84,17 +84,21 @@ class Password {
     this.$element.wrap(`<div class="input-group${sprintf(' input-group-%s', this.options.size)}" />`)
 
     this.$text = $('<input type="text" />')[placementFuc](this.$element)
-      .attr('class', this.$element.attr('class'))
-      .attr('style', this.$element.attr('style'))
-      .attr('placeholder', this.$element.attr('placeholder'))
-      .attr('maxlength', this.$element.attr('maxlength'))
-      .attr('disabled', this.$element.attr('disabled'))
       .css('display', this.$element.css('display'))
       .val(this.$element.val()).hide()
 
-    // Copy readonly attribute if it's set
-    if (this.$element.prop('readonly'))
-      this.$text.prop('readonly', true)
+    for (const attr of this.$element[0].attributes) {
+      if (
+        !attr.specified ||
+        ['id', 'type'].includes(attr.name) ||
+        attr.name.indexOf('data-') === 0
+      ) {
+        continue
+      }
+
+      this.$text.attr(attr.name, attr.value)
+    }
+
     this.$icon = $([
       `${sprintf(Constants.html.inputGroups[0], inputClass, this.options.message)}
       <i class="icon-eye-open ${this.options.eyeClass} ${this.options.eyeClassPositionInside ? '' : this.options.eyeOpenClass}">
