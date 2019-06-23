@@ -8,10 +8,12 @@ let bootstrapVersion = 4
 try {
   const rawVersion = $.fn.dropdown.Constructor.VERSION
 
-  // Only try to parse VERSION if is is defined.
+  // Only try to parse VERSION if it is defined.
   // It is undefined in older versions of Bootstrap (tested with 3.1.1).
   if (rawVersion !== undefined) {
     bootstrapVersion = parseInt(rawVersion, 10)
+  } else {
+    bootstrapVersion = 3
   }
 } catch (e) {
   // ignore
