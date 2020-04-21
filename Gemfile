@@ -2,5 +2,5 @@ source "https://rubygems.org"
 
 gem "jekyll"
 gem "rouge"
-gem "redcarpet"
+gem "kramdown"
 gem "jekyll-multiple-languages-plugin"
