@@ -123,8 +123,7 @@
   margin: 0!important;
 }
 </style>
-<div id="codefund"><!-- fallback content --></div>
-<script src="https://codefund.io/properties/292/funder.js" async="async"></script>
+<div id="gg"></div>
 
           </div>
         </div>
@@ -170,151 +169,161 @@
           data-hs="h1,h2"
           data-smart-id="true"
           data-bottom=".bs-docs-footer">
-          <h1>Options <a href="https://github.com/wenzhixin/bootstrap-show-password/blob/develop/docs/_i18n/en/documentation/options.md"></a></h1>
+          <h1 id="options-">Options <a href="https://github.com/wenzhixin/bootstrap-show-password/blob/develop/docs/_i18n/en/documentation/options.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
-<p>The Options are defined in <code>jQuery.fn.password.defaults</code>.</p>
+<p>The Options are defined in <code class="highlighter-rouge">jQuery.fn.password.defaults</code>.</p>
 
 <div class="start-table"></div>
 
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Attribute</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>-</td>
-<td>data-toggle</td>
-<td>String</td>
-<td>&#39;password&#39;</td>
-<td>Active password without writing JavaScript.</td>
-</tr>
-<tr>
-<td>placement</td>
-<td>data-placement</td>
-<td>String</td>
-<td>&#39;after&#39;</td>
-<td>The placement of show/hide icon, can be &#39;before&#39; or &#39;after&#39;.</td>
-</tr>
-<tr>
-<td>message</td>
-<td>data-message</td>
-<td>String</td>
-<td>&#39;Click here to show/hide password&#39;</td>
-<td>The tooltip of show/hide icon.</td>
-</tr>
-<tr>
-<td>size</td>
-<td>data-size</td>
-<td>String</td>
-<td>undefined</td>
-<td>The size of the input group.</td>
-</tr>
-<tr>
-<td>eyeClass</td>
-<td>data-eye-class</td>
-<td>String</td>
-<td>&#39;fa&#39;</td>
-<td>Base eye icon class.</td>
-</tr>
-<tr>
-<td>eyeOpenClass</td>
-<td>data-eye-open-class</td>
-<td>String</td>
-<td>&#39;fa-eye&#39;</td>
-<td>Open eye icon class.</td>
-</tr>
-<tr>
-<td>eyeCloseClass</td>
-<td>data-eye-close-class</td>
-<td>String</td>
-<td>&#39;fa-eye-slash&#39;</td>
-<td>Close eye icon class.</td>
-</tr>
-<tr>
-<td>eyeClassPositionInside</td>
-<td>data-eye-class-position-inside</td>
-<td>Boolean</td>
-<td>false</td>
-<td>Puts the open/close class inside the <code>&lt;i&gt;</code>. Use this option with google material icons.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Attribute</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-</td>
+      <td>data-toggle</td>
+      <td>String</td>
+      <td>‘password’</td>
+      <td>Active password without writing JavaScript.</td>
+    </tr>
+    <tr>
+      <td>placement</td>
+      <td>data-placement</td>
+      <td>String</td>
+      <td>‘after’</td>
+      <td>The placement of show/hide icon, can be ‘before’ or ‘after’.</td>
+    </tr>
+    <tr>
+      <td>message</td>
+      <td>data-message</td>
+      <td>String</td>
+      <td>‘Click here to show/hide password’</td>
+      <td>The tooltip of show/hide icon.</td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>data-size</td>
+      <td>String</td>
+      <td>undefined</td>
+      <td>The size of the input group.</td>
+    </tr>
+    <tr>
+      <td>eyeClass</td>
+      <td>data-eye-class</td>
+      <td>String</td>
+      <td>‘fa’</td>
+      <td>Base eye icon class.</td>
+    </tr>
+    <tr>
+      <td>eyeOpenClass</td>
+      <td>data-eye-open-class</td>
+      <td>String</td>
+      <td>‘fa-eye’</td>
+      <td>Open eye icon class.</td>
+    </tr>
+    <tr>
+      <td>eyeCloseClass</td>
+      <td>data-eye-close-class</td>
+      <td>String</td>
+      <td>‘fa-eye-slash’</td>
+      <td>Close eye icon class.</td>
+    </tr>
+    <tr>
+      <td>eyeClassPositionInside</td>
+      <td>data-eye-class-position-inside</td>
+      <td>Boolean</td>
+      <td>false</td>
+      <td>Puts the open/close class inside the <code class="highlighter-rouge">&lt;i&gt;</code>. Use this option with google material icons.</td>
+    </tr>
+  </tbody>
+</table>
 
-<h1>Events <a href="https://github.com/wenzhixin/bootstrap-show-password/blob/develop/docs/_i18n/en/documentation/events.md"></a></h1>
+<h1 id="events-">Events <a href="https://github.com/wenzhixin/bootstrap-show-password/blob/develop/docs/_i18n/en/documentation/events.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
 <p>To use event syntax:</p>
 
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#password'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'show.bs.password'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#password</span><span class="dl">'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">show.bs.password</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// code here</span>
 <span class="p">});</span>
-</code></pre></div>
+</code></pre></div></div>
 
 <div class="start-table"></div>
 
-<table><thead>
-<tr>
-<th>Event Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>show.bs.password</td>
-<td>This event fires immediately when the show instance method is called. If caused by a click, the clicked element is available as the relatedTarget property of the event.</td>
-</tr>
-<tr>
-<td>hide.bs.password</td>
-<td>This event is fired immediately when the hide instance method has been called.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Event Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>show.bs.password</td>
+      <td>This event fires immediately when the show instance method is called. If caused by a click, the clicked element is available as the relatedTarget property of the event.</td>
+    </tr>
+    <tr>
+      <td>hide.bs.password</td>
+      <td>This event is fired immediately when the hide instance method has been called.</td>
+    </tr>
+  </tbody>
+</table>
 
-<h1>Methods <a href="https://github.com/wenzhixin/bootstrap-show-password/blob/develop/docs/_i18n/en/documentation/methods.md"></a></h1>
+<h1 id="methods-">Methods <a href="https://github.com/wenzhixin/bootstrap-show-password/blob/develop/docs/_i18n/en/documentation/methods.md"></a></h1>
 
-<p><hr></p>
+<hr />
 
-<p>The calling method syntax: <code>$(&#39;#password&#39;).password(&#39;method&#39;, parameter);</code>.</p>
+<p>The calling method syntax: <code class="highlighter-rouge">$('#password').password('method', parameter);</code>.</p>
 
 <div class="start-table"></div>
 
-<table><thead>
-<tr>
-<th>Name</th>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>show</td>
-<td>-</td>
-<td>Manually show the password.</td>
-</tr>
-<tr>
-<td>hide</td>
-<td>-</td>
-<td>Manually hide the password.</td>
-</tr>
-<tr>
-<td>toggle</td>
-<td>-</td>
-<td>Manually toggle the password.</td>
-</tr>
-<tr>
-<td>val</td>
-<td>[value]</td>
-<td>Get the current value of the password or set the value of password.</td>
-</tr>
-<tr>
-<td>focus</td>
-<td>-</td>
-<td>Focus the password input.</td>
-</tr>
-</tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>show</td>
+      <td>-</td>
+      <td>Manually show the password.</td>
+    </tr>
+    <tr>
+      <td>hide</td>
+      <td>-</td>
+      <td>Manually hide the password.</td>
+    </tr>
+    <tr>
+      <td>toggle</td>
+      <td>-</td>
+      <td>Manually toggle the password.</td>
+    </tr>
+    <tr>
+      <td>val</td>
+      <td>[value]</td>
+      <td>Get the current value of the password or set the value of password.</td>
+    </tr>
+    <tr>
+      <td>focus</td>
+      <td>-</td>
+      <td>Focus the password input.</td>
+    </tr>
+  </tbody>
+</table>
+
 
         </div>
         
@@ -397,6 +406,7 @@
 
 <script src="../assets/js/sidenav.js?v=1.2.1"></script>
 <script src="../assets/js/common.js?v=1.2.1"></script>
+<script src="https://gg.wenzhixin.net.cn/wenzhixin/gg.js"></script>
 
   </body>
 </html>
