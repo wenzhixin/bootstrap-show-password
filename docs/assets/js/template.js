@@ -9,7 +9,7 @@ $(function () {
     success: function (data) {
       $('#example').html(data)
       $('#source').text(_beautifySource(data))
-      window.hljs.initHighlightingOnLoad()
+      window.hljs.highlightAll()
     }
   })
 
@@ -35,7 +35,7 @@ $(function () {
 window._config = {
   isDebug: location.hash.slice(1) === 'is-debug' ||
   ['localhost'].indexOf(location.hostname) > -1,
-  cdnUrl: 'https://unpkg.com/bootstrap-show-password@1.2.1/dist/',
+  cdnUrl: 'https://unpkg.com/bootstrap-show-password@1.3.0/dist/',
   localUrl: 'http://localhost:8080/github/bootstrap-show-password/src/'
 }
 

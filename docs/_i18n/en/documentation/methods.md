@@ -2,7 +2,7 @@
 
 ---
 
-The calling method syntax: `$('#password').password('method', parameter);`.
+The calling method syntax: `$('#password').password('method', parameter)`.
 
 <div class="start-table"></div>
 

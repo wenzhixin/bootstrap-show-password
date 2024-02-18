@@ -7,7 +7,7 @@ To use event syntax:
 ```js
 $('#password').on('show.bs.password', function (e) {
     // code here
-});
+})
 ```
 
 <div class="start-table"></div>
