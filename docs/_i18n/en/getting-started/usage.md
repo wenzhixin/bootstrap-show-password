@@ -30,5 +30,5 @@ Call a Bootstrap Show Password with id select with JavaScript.
 ```
 
 ```js
-$('#password').password();
+$('#password').password()
 ```

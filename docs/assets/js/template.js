@@ -9,7 +9,7 @@ $(function () {
     success: function (data) {
       $('#example').html(data)
       $('#source').text(_beautifySource(data))
-      window.hljs.initHighlightingOnLoad()
+      window.hljs.highlightAll()
     }
   })
 
@@ -35,7 +35,7 @@ $(function () {
 window._config = {
   isDebug: location.hash.slice(1) === 'is-debug' ||
   ['localhost'].indexOf(location.hostname) > -1,
-  cdnUrl: 'https://unpkg.com/bootstrap-show-password@1.2.1/dist/',
+  cdnUrl: 'https://unpkg.com/bootstrap-show-password@1.3.0/dist/',
   localUrl: 'http://localhost:8080/github/bootstrap-show-password/src/'
 }
 
@@ -145,25 +145,30 @@ function _beautifySource(data) {
     )
   } else if (theme === 'svg') {
     result.push(
-      '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">'
+      '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">'
     )
   } else {
     result.push(
-      '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">',
-      '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">'
+      '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">',
+      '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">'
     )
   }
   result = result.concat($.map(obj.links, _getLink))
   result.push('')
 
-  result.push('<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>')
+  result.push('<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>')
   if (theme === 'v3') {
     result.push(
       '<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>'
     )
   } else if (theme === 'svg') {
     result.push(
-      '<script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>'
+      '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>',
+      '<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/js/all.min.js"></script>'
+    )
+  } else {
+    result.push(
+      '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>'
     )
   }
   result = result.concat($.map(obj.scripts, function (script) {

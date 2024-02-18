@@ -1,15 +1,27 @@
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
  * https://github.com/wenzhixin/bootstrap-show-password
- * version: 1.2.1
+ * version: 1.3.0
  */
 
-let bootstrapVersion = 4
+let bootstrapVersion = 5
+
 try {
   const rawVersion = $.fn.dropdown.Constructor.VERSION
 
-  // Only try to parse VERSION if is is defined.
+  // Only try to parse VERSION if it is defined.
   // It is undefined in older versions of Bootstrap (tested with 3.1.1).
+  if (rawVersion !== undefined) {
+    bootstrapVersion = parseInt(rawVersion, 10)
+  }
+} catch (e) {
+  // ignore
+}
+
+try {
+  // eslint-disable-next-line no-undef
+  const rawVersion = bootstrap.Tooltip.VERSION
+
   if (rawVersion !== undefined) {
     bootstrapVersion = parseInt(rawVersion, 10)
   }
@@ -27,7 +39,12 @@ const Constants = {
       4: [
         '<div class="%s"><button tabindex="100" title="%s" class="btn btn-outline-secondary" type="button">',
         '</button></div>'
+      ],
+      5: [
+        '<button tabindex="100" title="%s" class="btn btn-outline-secondary" type="button">',
+        '</button>'
       ]
+
     }[bootstrapVersion]
   }
 }
@@ -82,17 +99,21 @@ class Password {
     this.$element.wrap(`<div class="input-group${sprintf(' input-group-%s', this.options.size)}" />`)
 
     this.$text = $('<input type="text" />')[placementFuc](this.$element)
-      .attr('class', this.$element.attr('class'))
-      .attr('style', this.$element.attr('style'))
-      .attr('placeholder', this.$element.attr('placeholder'))
-      .attr('maxlength', this.$element.attr('maxlength'))
-      .attr('disabled', this.$element.attr('disabled'))
       .css('display', this.$element.css('display'))
       .val(this.$element.val()).hide()
 
-    // Copy readonly attribute if it's set
-    if (this.$element.prop('readonly'))
-      this.$text.prop('readonly', true)
+    for (const attr of this.$element[0].attributes) {
+      if (
+        !attr.specified ||
+        ['id', 'type'].includes(attr.name) ||
+        attr.name.indexOf('data-') === 0
+      ) {
+        continue
+      }
+
+      this.$text.attr(attr.name, attr.value)
+    }
+
     this.$icon = $([
       `${sprintf(Constants.html.inputGroups[0], inputClass, this.options.message)}
       <i class="icon-eye-open ${this.options.eyeClass} ${this.options.eyeClassPositionInside ? '' : this.options.eyeOpenClass}">
@@ -118,7 +139,8 @@ class Password {
   }
 
   show (_relatedTarget) {
-    const e = $.Event('show.bs.password', {relatedTarget: _relatedTarget})
+    const e = $.Event('show.bs.password', { relatedTarget: _relatedTarget })
+
     this.$element.trigger(e)
 
     this.isShown = true
@@ -139,7 +161,8 @@ class Password {
   }
 
   hide (_relatedTarget) {
-    const e = $.Event('hide.bs.password', {relatedTarget: _relatedTarget})
+    const e = $.Event('hide.bs.password', { relatedTarget: _relatedTarget })
+
     this.$element.trigger(e)
 
     this.isShown = false
@@ -207,13 +230,11 @@ $.fn.password = function () {
         throw new Error(`Unknown method: ${option}`)
       }
       value = data[option](args[1])
+    } else if (!data) {
+      data = new Password($this, options)
+      $this.data('bs.password', data)
     } else {
-      if (!data) {
-        data = new Password($this, options)
-        $this.data('bs.password', data)
-      } else {
-        data.init(options)
-      }
+      data.init(options)
     }
   })
 
