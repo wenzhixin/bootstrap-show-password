@@ -32,20 +32,6 @@
   height: 100px
 }
 
-.bs-docs-header #codefund {
-  margin: 0!important;
-}
-
-.bs-docs-header .cf-wrapper {
-  font-size: 13px!important;
-  background-color: transparent!important;
-}
-
-.bs-docs-header .cf-text,
-.bs-docs-header .cf-powered-by {
-  color: #cdbfe3 !important
-}
-
-.bs-docs-header .cf-powered-by {
-  margin-top: 0!important;
+.bs-docs-header .ea-content {
+  background-color: #fff !important;
 }
