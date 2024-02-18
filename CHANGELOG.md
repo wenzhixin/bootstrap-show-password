@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+### 1.3.0
+
+- **New:** Supported bootstrap v5.
+- **New:** Supported all attributes without `data-*`.
+- **Update:** Fix bootstrap v3 old version is `undefined` bug.
+
 ### 1.2.1
 
 - **New:** Added font-awesome svg support.
