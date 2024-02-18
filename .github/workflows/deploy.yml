@@ -13,12 +13,12 @@ jobs:
         with:
           fetch-depth: '0'
 
-     - uses: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.6
           bundler-cache: true
 
-    - name: Build page with Jekyll
+      - name: Build page with Jekyll
         run: bundle exec jekyll build
 
       - name: Deploy to GitHub Pages
