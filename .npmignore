@@ -1,7 +1,6 @@
+.github
 docs
 _config.yml
-deploy_key.enc
-deploy.sh
 Gemfile
 Gemfile.lock
 src
