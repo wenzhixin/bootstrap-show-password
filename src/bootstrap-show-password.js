@@ -4,7 +4,7 @@
  * version: 1.2.1
  */
 
-let bootstrapVersion = 4
+let bootstrapVersion = 5
 try {
   const rawVersion = $.fn.dropdown.Constructor.VERSION
 
@@ -13,7 +13,7 @@ try {
   if (rawVersion !== undefined) {
     bootstrapVersion = parseInt(rawVersion, 10)
   } else {
-    bootstrapVersion = 3
+    bootstrapVersion = 4
   }
 } catch (e) {
   // ignore
@@ -29,7 +29,12 @@ const Constants = {
       4: [
         '<div class="%s"><button tabindex="100" title="%s" class="btn btn-outline-secondary" type="button">',
         '</button></div>'
-      ]
+      ],
+      5: [
+        '<button tabindex="100" title="%s" class="btn btn-outline-secondary" type="button">',
+        '</button>'
+      ],
+
     }[bootstrapVersion]
   }
 }
