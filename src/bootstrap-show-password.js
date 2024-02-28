@@ -105,7 +105,7 @@ class Password {
     for (const attr of this.$element[0].attributes) {
       if (
         !attr.specified ||
-        ['id', 'type'].includes(attr.name) ||
+        ['id', 'type', 'name'].includes(attr.name) ||
         attr.name.indexOf('data-') === 0
       ) {
         continue
